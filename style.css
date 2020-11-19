@@ -1,0 +1,83 @@
+body{
+    background-color: rgb(204, 204, 204);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows:2fr;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+h1{
+    text-align: center;
+    color: rgb(37, 37, 184);
+}
+
+h2{
+    text-align: center;
+    color: black;
+    font-size: 16px;
+}
+
+img{
+    display: block;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+
+}
+@keyframes fadeIn {
+    from {
+      margin-left: 20%;
+      width: 100%; 
+    }
+  
+    to {
+      margin-left: -20%;
+      width: 100%;
+    }
+  }
+
+.child1{
+    grid-column: 4/8;
+    grid-row: 1;
+}
+
+p{
+    text-align: justify;
+}
+
+@media screen and (min-width:768px) and (max-width: 1388px){
+    .container
+    {
+        width: 100%;
+    }
+    
+    .child1
+    {
+        width: 100%;
+    }
+}
+
+@media(max-width:767px){
+    .container
+    {
+        width: 100%;
+    }
+
+    .child1
+    {
+        width: 100%;
+    }
+}
+
+
+
+
