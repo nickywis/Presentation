@@ -11,17 +11,19 @@ body {
 
 .presentation{
     grid-column: 3/6;
+    text-align: justify;
    
 }
 
 h1{
     color: rgb(221, 38, 124);
+    text-align: center;
 }
 
 p{
     color: rgb(56, 55, 55);
     font-weight: 600;
-    text-align: justify;
+   
 }
 img{
   
@@ -68,16 +70,18 @@ img{
     }
 }
 
-@media(max-width:480px){
-    .container
-    {
-        width: 100%;
-    }
 
-    .presentation
-    {
-        width: 100%;
-    }
+@media (max-width: 480px) {
+	* {
+		box-sizing: border-box;
+	}
+	
+	/* passer body (et tous les éléments de largeur fixe) en largeur automatique */
+
+	.container{
+		width: auto;
+		margin: 0;
+		padding: 0;
+	}
+
 }
-
-
