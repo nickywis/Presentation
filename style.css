@@ -1,38 +1,35 @@
-body{
-    background-color: rgb(204, 204, 204);
+body {
+    background-image:url(blogg.jpg);
 }
 
 .container{
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-template-rows:2fr;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    grid-template-columns: repeat(8, 1fr);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  
+}
+
+.presentation{
+    grid-column: 4/6;
 }
 
 h1{
-    text-align: center;
-    color: rgb(37, 37, 184);
+    color: rgb(221, 38, 124);
 }
 
-h2{
-    text-align: center;
-    color: black;
-    font-size: 16px;
+p{
+    color: rgb(56, 55, 55);
+    font-weight: 600;
 }
-
 img{
-    display: block;
-    width: 500px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
+  
+    grid-column: 7;
     animation-name: fadeIn;
     animation-duration: 2s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
-
 }
+
 @keyframes fadeIn {
     from {
       margin-left: 20%;
@@ -45,22 +42,13 @@ img{
     }
   }
 
-.child1{
-    grid-column: 4/8;
-    grid-row: 1;
-}
-
-p{
-    text-align: justify;
-}
-
-@media screen and (min-width:768px) and (max-width: 1388px){
+  @media screen and (min-width:768px) and (max-width: 1388px){
     .container
     {
         width: 100%;
     }
     
-    .child1
+    .presentation
     {
         width: 100%;
     }
@@ -72,12 +60,22 @@ p{
         width: 100%;
     }
 
-    .child1
+    .presentation
     {
         width: 100%;
     }
 }
 
+@media(max-width:480px){
+    .container
+    {
+        width: 100%;
+    }
 
+    .presentation
+    {
+        width: 100%;
+    }
+}
 
 
